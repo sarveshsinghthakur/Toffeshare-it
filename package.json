@@ -1,0 +1,20 @@
+{
+  "name": "realtime-share",
+  "version": "1.0.0",
+  "description": "A realtime file-sharing Web Application.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ayush Tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "socket.io": "^4.7.5",
+    "venv": "^1.0.1"
+  }
+}
