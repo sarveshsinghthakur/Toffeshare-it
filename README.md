@@ -24,13 +24,14 @@ This is a realtime file-sharing web application built using HTML, CSS, JavaScrip
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/realtime-file-sharing.git
+   git clone https://github.com/sarveshsinghthakur/Toffeshare-it
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd realtime-file-sharing
+   cd Toffeshare-it
+   
    ```
 
 3. Install Dependencies.
