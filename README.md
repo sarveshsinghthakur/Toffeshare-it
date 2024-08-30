@@ -23,16 +23,28 @@ This project is a real-time file-sharing application using Node.js, Express, and
 1. **Clone the Repository**
 
    ```bash
+<<<<<<< HEAD
    git clone https://github.com/yourusername/your-repository.git
    cd your-repository
 Install Dependencies
+=======
+   git clone https://github.com/sarveshsinghthakur/Toffeshare-it
+   ```
+>>>>>>> ade0d089c6a491e787a1a4f9fcf41d7db3add414
 
 Ensure you have Node.js installed. Then, install the necessary dependencies:
 
+<<<<<<< HEAD
 bash
 Copy code
 npm install
 Run the Application
+=======
+   ```bash
+   cd Toffeshare-it
+   
+   ```
+>>>>>>> ade0d089c6a491e787a1a4f9fcf41d7db3add414
 
 Start the server:
 
