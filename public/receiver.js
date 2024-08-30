@@ -1,27 +1,21 @@
-// Initializers and Constants
+ 
 const connectRoomBtn = document.getElementById("receiver-start-con-btn");
 const socket = io();
 let senderId;
 let fileShare = {};
-
-//! Required Functions
-// RandomId Generator
+ 
 function randomIdGenerator() {
   return `${Math.trunc(Math.random() * 999)}-${Math.trunc(
     Math.random() * 999
   )}-${Math.trunc(Math.random() * 999)}`;
 }
-
-// RoomId setup Function
+ 
 function roomIdSetup() {
-  senderId = document.querySelector("#join-id").value;
-  //console.log(senderId);
+  senderId = document.querySelector("#join-id").value; 
   if (!senderId) {
     alert("Enter room ID to join");
   }
-  const joinId = randomIdGenerator();
-  //console.log(joinId);
-  //   Socket.emit is use to emit data from client to server in arguments 1st is the emmiter event,2nd is data to emmit.
+  const joinId = randomIdGenerator(); 
   socket.emit("receiver-join", {
     uid: joinId,
     sender_uid: senderId,
@@ -30,8 +24,7 @@ function roomIdSetup() {
   document.querySelector(".join-screen").classList.remove("active");
   document.querySelector(".fs-screen").classList.add("active");
 }
-
-// Function to listen for incoming file
+ 
 (() => {
   socket.on("fs-meta", function (metadata) {
     fileShare.metadata = metadata;
@@ -51,8 +44,7 @@ function roomIdSetup() {
     });
   });
 
-  socket.on("fs-share", (buffer) => {
-    //console.log(buffer);
+  socket.on("fs-share", (buffer) => { 
     fileShare.buffer.push(buffer);
     fileShare.transmitted += buffer.byteLength;
     fileShare.progress_node.innerText =
@@ -69,6 +61,5 @@ function roomIdSetup() {
     }
   });
 })();
-
-// Event Listeners
+ 
 connectRoomBtn.addEventListener("click", roomIdSetup);
